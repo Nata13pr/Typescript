@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.users-box {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: darkgrey;
+    gap: 20px;
+    padding: 15px;
+}
+
+.user-block {
+    width: calc(50% - 10px);
+    background-color: lightgray;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-block h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.address-block p {
+    margin-bottom: 5px;
+}
