@@ -10,7 +10,7 @@ const orderFunction = (carts, parentTag, description) => {
     }
     else {
         let mainUl = document.createElement("ol");
-        carts.forEach(cart => {
+        carts.forEach((cart) => {
             let li = document.createElement("li");
             let h2 = document.createElement("h2");
             h2.innerText = description;

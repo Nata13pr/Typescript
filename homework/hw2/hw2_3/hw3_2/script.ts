@@ -20,7 +20,9 @@ const descriptionRecipesFunction = (recipes: Recepies[]) => {
             li.appendChild(h2);
 
             for (let detail in recipe) {
-                let detailed: any = recipe[detail]
+                if (!recipe.hasOwnProperty(detail)) continue;
+                const key = detail as keyof Recepies;
+                let detailed: any = recipe[key]
                 if (!Array.isArray(detailed)) {
 
                     if (detail === 'image') {

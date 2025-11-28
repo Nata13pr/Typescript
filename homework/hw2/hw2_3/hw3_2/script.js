@@ -16,7 +16,10 @@ const descriptionRecipesFunction = (recipes) => {
             h2.innerHTML = 'Recipe';
             li.appendChild(h2);
             for (let detail in recipe) {
-                let detailed = recipe[detail];
+                if (!recipe.hasOwnProperty(detail))
+                    continue;
+                const key = detail;
+                let detailed = recipe[key];
                 if (!Array.isArray(detailed)) {
                     if (detail === 'image') {
                         let img = document.createElement("img");
@@ -49,7 +52,6 @@ const descriptionRecipesFunction = (recipes) => {
 fetch('https://dummyjson.com/recipes')
     .then(res => res.json())
     .then((responseObject) => {
-    console.log(responseObject);
     const { recipes } = responseObject;
     descriptionRecipesFunction(recipes);
 });

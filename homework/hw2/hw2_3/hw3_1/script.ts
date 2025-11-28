@@ -12,7 +12,7 @@ const orderFunction = (carts: ObjCarts[], parentTag: HTMLElement, description: s
     } else {
         let mainUl: HTMLOListElement = document.createElement("ol");
 
-        carts.forEach(cart => {
+        carts.forEach((cart:any) => {
             let li: HTMLLIElement = document.createElement("li");
             let h2: HTMLHeadingElement = document.createElement("h2");
             h2.innerText = description;
